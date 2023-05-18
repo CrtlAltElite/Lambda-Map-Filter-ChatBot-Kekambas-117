@@ -22,5 +22,6 @@
 - in the CLI while in the `Lambda-Map-Filter-ChatBot-Kekambas-117` folder
     - type on windows: `venv\Scripts\activate` (If not already active)
     - type on Mac/Linux: `. venv/bin/activate`  (If not already active)
+    - type `cd chatbot`
     - type `python chat.py`
 
