@@ -1,6 +1,7 @@
 from fuzzywuzzy import fuzz
 import re
 from ttsp import TextToSpeechPrinter
+from stti import SpeechToTextInputer
 
 class ChatBot:
     def __init__(self):
@@ -12,7 +13,7 @@ class ChatBot:
     
     def get_user_info(self):
         print("What is your name? ")
-        name=input(f"{self.user_name}: ")
+        name=input("")
         self.save_user_name(name)
         print(f"Welcome {name}")
     
@@ -56,7 +57,7 @@ class ChatBot:
         self.get_user_info()
         print("What can I do for you today?")
         while True:
-            user_input = input(f"{self.user_name}: ")
+            user_input = input("")
             if user_input.lower() == "quit":
                 print("Bye! Got off App!")
                 break
@@ -64,6 +65,7 @@ class ChatBot:
             response = self.get_response(user_input)
             print(response)
 
-with TextToSpeechPrinter():
+with TextToSpeechPrinter(), SpeechToTextInputer():
     chatbot = ChatBot()
     chatbot.start_chat()
+
