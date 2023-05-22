@@ -14,7 +14,9 @@
     - type on windows: `venv\Scripts\activate`
     - type on Mac/Linux: `. venv/bin/activate` 
 - Install dependencies:
-    - type: `pip install -r requirements.txt`
+    - on MacOSx: `brew install portaudio`
+    - 
+    - then all systems type: `pip install -r requirements.txt`
 
 
 ### To Run 
